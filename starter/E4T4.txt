@@ -1,0 +1,12 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+Using AWS WAF
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+No, instance in VPC still access to S3 with default VPC Endpoint permission
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, default encryption setting will be applied to new object.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+All configurations that were change from AWS Console will be reset by Cloud Formation

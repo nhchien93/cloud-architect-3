@@ -1,0 +1,8 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Security group `WebAppSG` have an Inbound rule that allows all traffic/port -> should remove this rule from the security group.
+
+# Poor practice 2
+Security group `WebAppSG` have an Inbound rule that allows all traffic with port 80, but we do not need this rule -> should be removed.
+An Inbound rule with port 5000 should be limit, only accept traffic from ELB security group.
