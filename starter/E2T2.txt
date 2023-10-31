@@ -1,0 +1,12 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+(Bonus - provide recommendations on how to remediate the vulnerabilities.)
+
+From AWS Inspector
+- On the instance i-0c1b40504545e239d, the port range 0-65535 is reachable from the InternetGateway igw-08aa4ca5fb6860554 from an attached ENI eni-041e55cb0f4b46016
+- Port 22 is reachable from an Internet Gateway - TCP for attack instance and application instance
+- Port 80 is reachable from an Internet Gateway - TCP for application instance
+
+- Using AWS Systems Manager for instance Manager
+- Enable logging for S3
+- Enable bucket policy
